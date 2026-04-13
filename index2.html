@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Especificaciones</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="navbar-logo">🐾 SUPER MASCOTAS</div>
+<ul class="navbar-links">
+<li><a href="presentacion.html">← Inicio</a></li>
+</ul>
+</nav>
+
+<aside class="sidebar">
+<h3>🐾 Menú</h3>
+<ul>
+<li><a href="#ostin">Ostin</a></li>
+<li><a href="#monito"> Monito</a></li>
+<li><a href="#raiko"> Raiko</a></li>
+<li><a href="#favoritos"> Favoritos</a></li>
+</ul>
+</aside>
+
+<section id="ostin" class="pagina-mascota">
+<div class="detalle-card">
+<img src="Captura desde 2026-04-07 22-44-57.png" width="200">
+<h1>Ostin el Cazador</h1>
+<p class="subtitulo">Taciturno</p>
+<button class="btn-toggle" onclick="toggleInfo(this)">👁️ Ver info</button>
+<div class="info-container" style="display:none">
+<div class="info-seccion">
+<h3>🍽️ Alimentación</h3>
+<p>Croquetas Miringo 2 veces en el dia, 125gramos (Mañana/noche).</p>
+</div>
+<div class="info-seccion">
+<h3>🛁 Baños</h3>
+<p>2 veces trimestralmente, no le gusta el agua y es agresivo.</p>
+</div>
+<div class="info-seccion">
+<h3>🎮 Horario de juego</h3>
+<p>Cuando el decida, a cualquier hora del dia. DISPONIBLE</p>
+</div>
+<div class="info-seccion">
+<h3>⭐ Cuidados especiales</h3>
+<p>Cepillado semanal con cerdas finas y requiere silencio en cualquier lugar.</p>
+</div>
+</div>
+<a href="presentacion.html" class="btn-volver">← Volver</a>
+</div>
+</section>
+
+<section id="monito" class="pagina-mascota">
+<div class="detalle-card">
+<img src="mono.png" width="200">
+<h1>Monito Veloz</h1>
+<p class="subtitulo">El vivaracho</p>
+<button class="btn-toggle" onclick="toggleInfo(this)">👁️ Ver info</button>
+<div class="info-container" style="display:none">
+<div class="info-seccion">
+<h3>🍽️ Alimentación</h3>
+<p>Concentrado Rochu con alimento húmedo dog chow 3 veces al dia 125gm y meriendas que encuentre en el camino.</p>
+</div>
+<div class="info-seccion">
+<h3>🛁 Baños</h3>
+<p>2 veces al mes, pero es opcional.</p>
+</div>
+<div class="info-seccion">
+<h3>🎮 Horario de juego</h3>
+<p>Siempre que este con Raiko, puede durar todo el tiempo hasta darse por vencido.</p>
+</div>
+<div class="info-seccion">
+<h3>⭐ Cuidados especiales</h3>
+<p>Revisión dental semanal, galletas especiales para el aliento 20gm diarios.</p>
+</div>
+</div>
+<a href="presentacion.html" class="btn-volver">← Volver</a>
+</div>
+</section>
+
+<section id="raiko" class="pagina-mascota">
+<div class="detalle-card">
+<img src="Raiko.png" width="200">
+<h1>Raiko el Titan</h1>
+<p class="subtitulo">Guardian Guerrero</p>
+<button class="btn-toggle" onclick="toggleInfo(this)">👁️ Ver info</button>
+<div class="info-container" style="display:none">
+<div class="info-seccion">
+<h3>🍽️ Alimentación</h3>
+<p>3 comidas al día concentrado Dogourmet con carne, pollo, higado 467gm.</p>
+</div>
+<div class="info-seccion">
+<h3>🛁 Baños</h3>
+<p>Cada 3 semanas con shampoo especial, tiene delicado el pelaje.</p>
+</div>
+<div class="info-seccion">
+<h3>🎮 Horario de juego</h3>
+<p>Juega todo el dia con juguetes y coge a Monito como uno.</p>
+</div>
+<div class="info-seccion">
+<h3>⭐ Cuidados especiales</h3>
+<p>Revisión de oidos cada 7 dias.</p>
+</div>
+</div>
+<a href="presentacion.html" class="btn-volver">← Volver</a>
+</div>
+</section>
+
+<section id="favoritos" class="pagina-mascota">
+<div class="detalle-card">
+<h1>⭐ Favoritos</h1>
+<p class="subtitulo">Próximamente</p>
+<a href="presentacion.html" class="btn-volver">← Volver</a>
+</div>
+</section>
+
+<script>
+function toggleInfo(btn) {
+const info = btn.nextElementSibling;
+if (info.style.display === 'none') {
+info.style.display = 'block';
+btn.textContent = ' Ocultar info';
+btn.style.backgroundColor = '#2ecc71';
+} else {
+info.style.display = 'none';
+btn.textContent = '👁️ Ver info';
+btn.style.backgroundColor = '';
+}
+}
+
+window.addEventListener('load', function() {
+const hash = window.location.hash;
+if (hash) {
+const seccion = document.querySelector(hash);
+if (seccion) seccion.style.display = 'flex';
+}
+});
+</script>
+
+</body>
+</html>

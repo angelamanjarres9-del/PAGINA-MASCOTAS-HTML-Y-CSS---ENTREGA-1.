@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Mascotas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <video autoplay muted loop class="video-fondo">
+    <source src="fondoanimado.mp4" type="video/mp4">
+  </video>
+
+  <nav class="navbar">
+    <div class="navbar-logo">🐾 SUPER MASCOTAS</div>
+    <ul class="navbar-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Mascotas</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <aside class="sidebar">
+    <h3>🐾 Menú</h3>
+    <ul>
+      <li><a href="index2.html#ostin"> Ostin</a></li>
+      <li><a href="index2.html#monito">Monito</a></li>
+      <li><a href="index2.html#raiko"> Raiko</a></li>
+      <li><a href="index2.html#favoritos">⭐ Favoritos</a></li>
+    </ul>
+  </aside>
+
+  <main class="contenedor-principal">
+    <h1 class="titulo">SUPER MASCOTAS</h1>
+
+    <div class="carrusel">
+      <div class="carrusel-ventana">
+        <div class="carrusel-pista" id="pista">
+
+          <!-- ORIGINALES -->
+          <div class="tarjeta-slide">
+            <img src="ostin.png" width="150" height="180">
+            <h2>Ostin el Cazador</h2>
+            <p class="subtitulo">Taciturno</p>
+            <p>Experto en vigilancia silenciosa. Domina cada rincon del territorio con mirada de acero.</p>
+            <div class="habilidades">
+              <span class="tag">Sigilo Total</span>
+              <span class="tag">Mirada Letal</span>
+              <span class="tag">Juicio Divino</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-OSTIN</button>
+          </div>
+
+          <div class="tarjeta-slide">
+            <img src="mono.png" width="150" height="180">
+            <h2>Monito Veloz</h2>
+            <p class="subtitulo">El vivaracho</p>
+            <p>Sus ojos marrones hipnotizan a cualquiera. Especialista en desaparecer.</p>
+            <div class="habilidades">
+              <span class="tag">Ojos Hipnoticos</span>
+              <span class="tag">Velocidad x10</span>
+              <span class="tag">Odioso</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-MONOJO</button>
+          </div>
+
+          <div class="tarjeta-slide">
+            <img src="Raiko.png" width="150" height="180">
+            <h2>Raiko el Titan</h2>
+            <p class="subtitulo">Guardian guerrero</p>
+            <p>Musculos de acero, corazon de oro. Desconfiado</p>
+            <div class="habilidades">
+              <span class="tag">Fuerza Bruta</span>
+              <span class="tag">Lengua Bionica</span>
+              <span class="tag">Guardian Eterno</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-RAIKO</button>
+          </div>
+
+          <!-- COPIAS PARA EFECTO INFINITO -->
+          <div class="tarjeta-slide">
+            <img src="ostin.png" width="150" height="180">
+            <h2>Ostin el Cazador</h2>
+            <p class="subtitulo">Taciturno</p>
+            <p>Experto en vigilancia silenciosa. Domina cada rincon del territorio con mirada de acero.</p>
+            <div class="habilidades">
+              <span class="tag">Sigilo Total</span>
+              <span class="tag">Mirada Letal</span>
+              <span class="tag">Juicio Divino</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-OSTIN</button>
+          </div>
+
+          <div class="tarjeta-slide">
+            <img src="mono.png" width="150" height="180">
+            <h2>Monito Veloz</h2>
+            <p class="subtitulo">El vivaracho</p>
+            <p>Sus ojos marrones hipnotizan a cualquiera. Especialista en desaparecer.</p>
+            <div class="habilidades">
+              <span class="tag">Ojos Hipnoticos</span>
+              <span class="tag">Velocidad x10</span>
+              <span class="tag">Odioso</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-MONOJO</button>
+          </div>
+
+          <div class="tarjeta-slide">
+            <img src="Raiko.png" width="150" height="180">
+            <h2>Raiko el Titan</h2>
+            <p class="subtitulo">Guardian guerrero</p>
+            <p>Musculos de acero, corazon de oro. Desconfiado</p>
+            <div class="habilidades">
+              <span class="tag">Fuerza Bruta</span>
+              <span class="tag">Lengua Bionica</span>
+              <span class="tag">Guardian Eterno</span>
+            </div>
+            <button class="btn-contacto">CONTACTAME @MASCOTASCOOL-RAIKO</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let actual = 0;
+    const ancho = 360;
+
+    function moverCarrusel() {
+      actual++;
+      const pista = document.getElementById('pista');
+      pista.style.transition = 'transform 0.2s ease';
+      pista.style.transform = 'translateX(-' + (actual * ancho) + 'px)';
+
+      if (actual >= 3) {
+        setTimeout(function () {
+          pista.style.transition = 'none';
+          actual = 0;
+          pista.style.transform = 'translateX(0px)';
+        }, 300);
+      }
+    }
+
+    setInterval(moverCarrusel, 1500);
+  </script>
+
+</body>
+
+</html>

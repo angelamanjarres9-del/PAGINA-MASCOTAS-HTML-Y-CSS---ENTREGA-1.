@@ -1,0 +1,326 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(rgba(224, 168, 226, 0.5), rgba(201, 188, 188, 0.5)), url(https://thumbs.dreamstime.com/b/modelo-incons%C3%BAtil-de-la-contabilidad-financiera-con-l%C3%ADnea-plana-iconos-fondo-optimizaci%C3%B3n-del-impuesto-pr-pr%C3%A9stamo-factura-el-136072549.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+  margin-top: 60px;
+  margin-left: 160px;
+}
+
+.titulo {
+  font-family: 'Bangers', cursive;
+  font-weight: 900;
+  font-size: 6rem;
+  color: #7c1f60;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(124, 31, 96, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-family: 'Bangers', cursive;
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #dfcee9;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 160px;
+  height: calc(100vh - 60px);
+  background-color: rgba(80, 80, 105, 0.85);
+  padding: 20px 15px;
+  z-index: 90;
+  box-sizing: border-box;
+}
+
+.sidebar h3 {
+  color: #dfcee9;
+  font-family: 'Bangers', cursive;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: block;
+  background-color: rgba(190, 63, 184, 0.3);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul a:hover {
+  background-color: #be3fb8;
+}
+
+h1 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: #a50e78;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.habilidades {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #dfcee9;
+  color: #11a837;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.btn-contacto {
+  margin-top: 2rem;
+  background-color: #be3fb8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-contacto:active {
+  background-color: #c6d9f0;
+}
+
+.tarjeta {
+  width: 390px;
+  height: 520px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.frente {
+  background-color: rgb(168, 151, 245);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* CARRUSEL */
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.carrusel-ventana {
+  width: 420px;
+  overflow: hidden;
+}
+
+.carrusel-pista {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrusel-pista .tarjeta {
+  min-width: 420px;
+}
+
+.flecha {
+  background-color: #7c1f60;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.flecha:hover {
+  background-color: #be3fb8;
+}
+
+/* PAGINAS ESPECIFICACIONES */
+.pagina-mascota {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 160px;
+  width: calc(100% - 160px);
+  height: calc(100vh - 60px);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.pagina-mascota:target {
+  display: flex;
+}
+
+#ostin  { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); }
+#monito { background: linear-gradient(135deg, #1a472a, #2d6a4f, #52b788); }
+#raiko  { background: linear-gradient(135deg, #7b2d00, #c1440e, #e07b39); }
+#favoritos { background: linear-gradient(135deg, #7c1f60, #be3fb8); }
+
+.detalle-card {
+  background-color: rgba(168, 151, 245, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(139, 22, 155, 0.3);
+}
+
+.info-seccion {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.info-seccion h3 {
+  color: #7c1f60;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.info-seccion p {
+  font-size: 0.88rem;
+  color: #333;
+  margin: 0;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #be3fb8;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #7c1f60;
+}
+
+.btn-fav {
+  margin-top: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn-fav:hover {
+  background-color: #c0392b;
+}
+
+.fav-item {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
