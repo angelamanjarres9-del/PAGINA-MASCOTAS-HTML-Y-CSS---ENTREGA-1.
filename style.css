@@ -1,132 +1,186 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(rgba(224, 168, 226, 0.5), rgba(201, 188, 188, 0.5)), url(https://thumbs.dreamstime.com/b/modelo-incons%C3%BAtil-de-la-contabilidad-financiera-con-l%C3%ADnea-plana-iconos-fondo-optimizaci%C3%B3n-del-impuesto-pr-pr%C3%A9stamo-factura-el-136072549.jpg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  position: relative;
-}
-
-.contenedor-principal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  z-index: 10;
-  margin-top: 60px;
-  margin-left: 160px;
-}
-
-.titulo {
-  font-family: 'Bangers', cursive;
-  font-weight: 900;
-  font-size: 6rem;
-  color: #7c1f60;
-  text-align: center;
-  margin-bottom: 30px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+min-height: 100vh;
 }
 
 .video-fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+object-fit: cover;
+z-index: -1;
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: rgba(124, 31, 96, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  z-index: 100;
-  box-sizing: border-box;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px;
+background-color: rgba(124, 31, 96, 0.9);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 30px;
+z-index: 100;
 }
 
 .navbar-logo {
-  font-family: 'Bangers', cursive;
-  color: white;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
+font-family: 'Bangers', cursive;
+color: white;
+font-size: 1.8rem;
+letter-spacing: 2px;
 }
 
 .navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+list-style: none;
+display: flex;
+gap: 25px;
 }
 
 .navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  transition: color 0.3s;
+color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 0.95rem;
+transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #dfcee9;
+color: #dfcee9;
 }
 
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 60px;
-  width: 160px;
-  height: calc(100vh - 60px);
-  background-color: rgba(80, 80, 105, 0.85);
-  padding: 20px 15px;
-  z-index: 90;
-  box-sizing: border-box;
+position: fixed;
+left: 0;
+top: 60px;
+width: 160px;
+height: calc(100vh - 60px);
+background-color: rgba(80, 80, 105, 0.85);
+padding: 20px 15px;
+z-index: 90;
 }
 
 .sidebar h3 {
-  color: #dfcee9;
-  font-family: 'Bangers', cursive;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+color: #dfcee9;
+font-family: 'Bangers', cursive;
+font-size: 1.3rem;
+margin-bottom: 15px;
 }
 
 .sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 12px;
 }
 
 .sidebar ul a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: bold;
-  display: block;
-  background-color: rgba(190, 63, 184, 0.3);
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+color: white;
+text-decoration: none;
+font-size: 0.95rem;
+font-weight: bold;
+display: block;
+background-color: rgba(190, 63, 184, 0.3);
+padding: 10px 15px;
+border-radius: 8px;
+transition: background-color 0.3s;
 }
 
 .sidebar ul a:hover {
-  background-color: #be3fb8;
+background-color: #be3fb8;
 }
 
-h1 {
+.contenedor-principal {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 80px;
+margin-left: 160px;
+min-height: 100vh;
+}
+
+.titulo {
+font-family: 'Bangers', cursive;
+font-size: 6rem;
+color: #7c1f60;
+text-align: center;
+margin-bottom: 30px;
+}
+
+
+.carrusel-3d {
+  width: 100%;
+  overflow: hidden;        
+  padding: 30px 0;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+.carrusel-track {          /* ← nuevo: el elemento que se mueve */
+  display: flex;
+  gap: 30px;
+  animation: rodar 12s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rodar {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-1230px); } /* 3 tarjetas × (380 + 30gap) */
+}
+
+/* TARJETAS INDIVIDUALES */
+.tarjeta-slide {
+  flex-shrink: 0;
+  /* flex-shrink: 0 = las tarjetas NO se encogen */
+  
+  width: 380px;
+  /* ancho fijo para que se vean 2-3 tarjetas a la vez */
+  
+  background-color: rgb(168, 151, 245);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-slide img {
+  width: 120px;
+  height: 150px;
+  /* reducir tamaño de la foto para que quepa mejor */
+  
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.tarjeta-slide h2 {
   color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin: 8px 0 4px;
+}
+
+.tarjeta-slide p {
+  font-size: 0.75rem;
+}
+
+.tarjeta-slide .habilidades {
+  margin-top: 1rem;
+  /* espacio de 1rem (aproximadamente 16px) arriba */
+}
+
+.tarjeta-slide .btn-contacto {
+  margin-top: 10px;
+  /* espacio arriba del botón */
 }
 
 .subtitulo {
@@ -135,6 +189,7 @@ h1 {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .habilidades {
@@ -154,7 +209,7 @@ h1 {
 }
 
 .btn-contacto {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   background-color: #be3fb8;
   color: white;
   border: none;
@@ -162,75 +217,14 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  transition: 0.3s;
 }
 
 .btn-contacto:active {
   background-color: #c6d9f0;
+  /* cambia a color claro */
 }
 
-.tarjeta {
-  width: 390px;
-  height: 520px;
-  border-radius: 15px;
-  text-align: center;
-  position: relative;
-  background-color: transparent;
-}
-
-.cara {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-}
-
-.frente {
-  background-color: rgb(168, 151, 245);
-  padding: 2rem;
-  overflow: hidden;
-}
-
-/* CARRUSEL */
-.carrusel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-}
-
-.carrusel-ventana {
-  width: 420px;
-  overflow: hidden;
-}
-
-.carrusel-pista {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carrusel-pista .tarjeta {
-  min-width: 420px;
-}
-
-.flecha {
-  background-color: #7c1f60;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 10;
-}
-
-.flecha:hover {
-  background-color: #be3fb8;
-}
-
-/* PAGINAS ESPECIFICACIONES */
 .pagina-mascota {
   display: none;
   position: fixed;
@@ -243,7 +237,6 @@ h1 {
   z-index: 200;
   overflow-y: auto;
   padding: 40px;
-  box-sizing: border-box;
 }
 
 .pagina-mascota:target {
@@ -323,4 +316,38 @@ h1 {
   padding: 10px;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.btn-toggle {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.btn-toggle summary {
+  background-color: #7c1f60;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.btn-toggle summary:hover {
+  background-color: #be3fb8;
+
+}
+
+.btn-toggle[open] summary {
+  background-color: #be3fb8;
+  /* color más claro */
+}
+
+/* CONTENEDOR DE INFORMACIÓN EXPANDIBLE */
+.info-container {
+  margin-top: 10px;
+  /* espacio arriba del contenido expandido */
 }
